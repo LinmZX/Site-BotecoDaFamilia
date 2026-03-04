@@ -60,20 +60,26 @@ function updateBusinessStatus() {
   currentTimeElement.textContent = `Horário local em Jauá: ${String(hour).padStart(2, "0")}:${String(minute).padStart(2, "0")} (${weekdayName})`;
 }
 
+let lastScrollY = window.scrollY || 0;
+
 function updateLogoWithScroll() {
   if (!scrollLogoElement) {
     return;
   }
 
-  const y = window.scrollY || 0;
-  const moveY = Math.min(28, y * 0.06);
-  const rotation = Math.min(22, y * 0.05);
+  const currentY = window.scrollY || 0;
+  const isScrollingDown = currentY > lastScrollY;
 
-  scrollLogoElement.style.transform = `translateY(${moveY}px) rotate(${rotation}deg)`;
+  if (isScrollingDown) {
+    const moveY = Math.min(28, currentY * 0.06);
+    const rotation = Math.min(22, currentY * 0.05);
+    scrollLogoElement.style.transform = `translateY(${moveY}px) rotate(${rotation}deg)`;
+  }
+
+  lastScrollY = currentY;
 }
 
 updateFooterYear();
 updateBusinessStatus();
-updateLogoWithScroll();
 
 window.addEventListener("scroll", updateLogoWithScroll, { passive: true });
