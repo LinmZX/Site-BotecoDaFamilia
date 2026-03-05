@@ -19,7 +19,10 @@
   <body>
     <header class="hero" id="inicio">
       <nav class="nav">
-        <p class="logo">Boteco da Família</p>
+        <div class="brand">
+          <img class="logo-emblem" id="scroll-logo" src="assets/logo-boteco.gif" alt="Logo Boteco da Família" />
+          <p class="logo">Boteco da Família</p>
+        </div>
         <ul>
           <li><a href="#inicio">Início</a></li>
           <li><a href="#destaques">Destaques</a></li>
@@ -39,7 +42,7 @@
           <a class="btn primary" href="https://pedido.anota.ai/loja/boteco-da-familia" target="_blank" rel="noreferrer">Pedir agora</a>
           <a class="btn ghost" href="https://wa.me/5571987931468?text=Ol%C3%A1!%20Gostaria%20de%20reservar%20uma%20mesa%20no%20Boteco%20da%20Fam%C3%ADlia." target="_blank" rel="noreferrer">Reservar pelo WhatsApp</a>
         </div>
-        <div class="status-box" id="status-box">
+        <div class="status-box">
           <p class="status-title">Status de funcionamento</p>
           <p class="status-pill" id="open-status">Verificando...</p>
           <p class="status-time" id="current-time"></p>
@@ -48,39 +51,14 @@
 
       <section class="dish-slider" aria-label="Pratos típicos do Boteco da Família">
         <div class="slider-track">
-          <article class="dish-card">
-            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1000&q=80" alt="Pizza artesanal saindo do forno" />
-            <p>Pizza artesanal</p>
-          </article>
-          <article class="dish-card">
-            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80" alt="Prato feito com arroz, salada e carne" />
-            <p>Pratos da casa</p>
-          </article>
-          <article class="dish-card">
-            <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1000&q=80" alt="Porções típicas de boteco" />
-            <p>Porções de boteco</p>
-          </article>
-          <article class="dish-card">
-            <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=1000&q=80" alt="Mesa com comida e família reunida" />
-            <p>Ambiente familiar</p>
-          </article>
-
-          <article class="dish-card" aria-hidden="true">
-            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1000&q=80" alt="" />
-            <p>Pizza artesanal</p>
-          </article>
-          <article class="dish-card" aria-hidden="true">
-            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80" alt="" />
-            <p>Pratos da casa</p>
-          </article>
-          <article class="dish-card" aria-hidden="true">
-            <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1000&q=80" alt="" />
-            <p>Porções de boteco</p>
-          </article>
-          <article class="dish-card" aria-hidden="true">
-            <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=1000&q=80" alt="" />
-            <p>Ambiente familiar</p>
-          </article>
+          <article class="dish-card"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1000&q=80" alt="Pizza artesanal" /><p>Pizza artesanal</p></article>
+          <article class="dish-card"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80" alt="Pratos da casa" /><p>Pratos da casa</p></article>
+          <article class="dish-card"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1000&q=80" alt="Porções de boteco" /><p>Porções de boteco</p></article>
+          <article class="dish-card"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=1000&q=80" alt="Ambiente familiar" /><p>Ambiente familiar</p></article>
+          <article class="dish-card" aria-hidden="true"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1000&q=80" alt="" /><p>Pizza artesanal</p></article>
+          <article class="dish-card" aria-hidden="true"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80" alt="" /><p>Pratos da casa</p></article>
+          <article class="dish-card" aria-hidden="true"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1000&q=80" alt="" /><p>Porções de boteco</p></article>
+          <article class="dish-card" aria-hidden="true"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=1000&q=80" alt="" /><p>Ambiente familiar</p></article>
         </div>
       </section>
     </header>
@@ -89,27 +67,9 @@
       <section class="section" id="destaques">
         <h2>Por que escolher o Boteco da Família?</h2>
         <div class="grid cards">
-          <article class="card">
-            <h3>Receitas com identidade baiana</h3>
-            <p>
-              Sabores que lembram comida feita com carinho, sempre com ingredientes
-              frescos e preparo artesanal.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Pizza e restaurante no mesmo lugar</h3>
-            <p>
-              Ideal para todos os gostos: da pizza de massa leve aos pratos executivos
-              e porções para compartilhar.
-            </p>
-          </article>
-          <article class="card">
-            <h3>Atendimento próximo e rápido</h3>
-            <p>
-              Faça seu pedido online ou reserve sua mesa direto no WhatsApp, com
-              praticidade e atendimento humanizado.
-            </p>
-          </article>
+          <article class="card"><h3>Receitas com identidade baiana</h3><p>Sabores que lembram comida feita com carinho, sempre com ingredientes frescos e preparo artesanal.</p></article>
+          <article class="card"><h3>Pizza e restaurante no mesmo lugar</h3><p>Ideal para todos os gostos: da pizza de massa leve aos pratos executivos e porções para compartilhar.</p></article>
+          <article class="card"><h3>Atendimento próximo e rápido</h3><p>Faça seu pedido online ou reserve sua mesa direto no WhatsApp, com praticidade e atendimento humanizado.</p></article>
         </div>
       </section>
 
@@ -118,18 +78,9 @@
           <p class="badge">Cardápio da Casa</p>
           <h2>Destaques mais pedidos</h2>
           <ul class="menu-list">
-            <li>
-              <strong>Pizza Calabresa Especial</strong>
-              <span>Calabresa artesanal, cebola roxa, muçarela e orégano.</span>
-            </li>
-            <li>
-              <strong>Parmegiana da Família</strong>
-              <span>Filé empanado, molho de tomate rústico e queijo gratinado.</span>
-            </li>
-            <li>
-              <strong>Porção Mista do Boteco</strong>
-              <span>Iscas de frango, batata rústica e molhos da casa.</span>
-            </li>
+            <li><strong>Pizza Calabresa Especial</strong><span>Calabresa artesanal, cebola roxa, muçarela e orégano.</span></li>
+            <li><strong>Parmegiana da Família</strong><span>Filé empanado, molho de tomate rústico e queijo gratinado.</span></li>
+            <li><strong>Porção Mista do Boteco</strong><span>Iscas de frango, batata rústica e molhos da casa.</span></li>
           </ul>
           <div class="hero-actions">
             <a class="btn primary" href="https://pedido.anota.ai/loja/boteco-da-familia" target="_blank" rel="noreferrer">Ver cardápio completo</a>
@@ -144,24 +95,19 @@
         <div class="grid contact">
           <article class="card">
             <h3>Pedidos online</h3>
-            <p>
-              Faça seu pedido com rapidez e acompanhe tudo pelo link oficial da
-              loja.
-            </p>
+            <p>Faça seu pedido com rapidez e acompanhe tudo pelo link oficial da loja.</p>
             <a href="https://pedido.anota.ai/loja/boteco-da-familia" target="_blank" rel="noreferrer">Acessar plataforma de pedidos</a>
           </article>
           <article class="card">
             <h3>Reserva via WhatsApp</h3>
-            <p>
-              Clique para conversar com a equipe e reservar sua mesa.
-            </p>
+            <p>Clique para conversar com a equipe e reservar sua mesa.</p>
             <p><strong>WhatsApp:</strong> (71) 98793-1468</p>
             <a href="https://wa.me/5571987931468?text=Ol%C3%A1!%20Gostaria%20de%20reservar%20uma%20mesa." target="_blank" rel="noreferrer">Abrir WhatsApp</a>
           </article>
           <article class="card">
-            <h3>Endereço e horário</h3>
-            <p><strong>Endereço:</strong> Ao lado do condomínio portal de jaua - R. Alameda Portal de Jauá - Jauá, Camaçari - BA, 42828-754</p>
-            <ul class="hours-list" id="hours-list"></ul>
+            <h3>Endereço</h3>
+            <p><strong>Ao lado do condomínio portal de jaua</strong></p>
+            <p>R. Alameda Portal de Jauá - Jauá, Camaçari - BA, 42828-754</p>
           </article>
         </div>
       </section>
